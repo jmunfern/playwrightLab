@@ -1,8 +1,8 @@
 export default class LoginPage {
     private Elements = {
-        usernameInput: "//input[@name='username']",
-        passwordInput: "//input[@name='password']",
-        loginBtn: "//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[3]/button[1]"
+        usernameInput: "//input[@id='user-name']",
+        passwordInput: "//input[@id='password']",
+        message: "//h3[contains(text(),'Epic sadface: Username and password do not match a')]"
     }
 
     async navigateToOrangePage() {
@@ -13,7 +13,7 @@ export default class LoginPage {
     async login(user: string, password: string) {
         await global.page.waitForSelector(this.Elements.usernameInput);
         await global.page.type(this.Elements.usernameInput, user);
-        await global.page.type(this.Elements.passwordInput, password)
-        await global.page.click(this.Elements.loginBtn);
+        await global.page.type(this.Elements.passwordInput, password);
+        await global.page.click(this.Elements.message);
     }
 }

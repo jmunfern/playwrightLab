@@ -8,6 +8,6 @@
 
 `npx playwright install`
 
-## Paso 3: Ejecutar
+## Paso 3: Ejecutar Test
 
 `npm run test-dev`
