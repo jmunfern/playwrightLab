@@ -1,8 +1,8 @@
 export default class LoginPage {
     private Elements = {
-        usernameInput: "//input[@id='user-name']",
-        passwordInput: "//input[@id='password']",
-        loginBtn: "//input[@id='login-button']"
+        usernameInput: "//div[@class='form_group']//input",
+        passwordInput: "(//div[@class='form_group']//input)[2]",
+        loginBtn: "(//div[@class='login-box']//input)[3]"
     }
 
     async navigateToOrangePage() {
